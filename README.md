@@ -28,16 +28,21 @@ To train and predict on this dataset the code needs to be changed accordingly.
 Some examples:
 
 - Train non-factored RBM with bernoulli softmax visible units and standard parameters:
+    
         python main.py 
 
 - Train non-factored RBM with binomial softmax visible units and a with smaller learning rate (0.0002) for weights and biases:
+    
         python main.py -x -r 0.0002 -v 0.0002 -z 0.0002
 
 - Train factored RBM with 10 factors and 40 hiddens with binomial softmax visible units and CD-11:
+    
         python main.py -t 1 -x -r 0.0002 -v 0.0002 -z 0.0002 -s 11 -n 40 -y 10
 
 - Train conditional RBM with bernoulli softmax visible units:
+        
         python main.py -t 2
 
 - Help:
+        
         python main.py --help
